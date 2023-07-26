@@ -1,0 +1,184 @@
+@charset " utf-8";
+
+*{
+  margin : 0;
+  padding : 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* 홈페이지 첫 섹션 */
+.home-sect01{
+  width : 100%;
+  overflow : hidden;
+  position : relative;
+  padding : 70px 0;
+  color : #fff;
+}
+
+/* 섹션 타이틀 공통 서식 */
+.sect_title{
+  margin-bottom : 20px;
+}
+
+/* 첫 섹션 타이틀(별도 서식) */
+.title01{
+  /* 원래는 16px */
+  font-size : 24px;
+  text-align : center;
+  margin-bottom : 20px;
+}
+
+/* 가짜 이미지 */
+.fake{
+  width : 1100px;
+}
+
+/* 첫 섹션 타이틀 글자 span 태그 */
+.title_txt{
+  color : #fff;
+  position : relative;
+}
+
+/* 첫 섹션 타이틀 글자 span 태그 밑줄 가상요소 */
+.title_txt::after{
+  content : "";
+  display : inline-block;
+  height : 2px;
+  width : 100%;
+  position : absolute;
+  left : 0;
+  bottom : -8px;
+  background-color: rgba(255,255,255,.2);
+}
+
+/* 첫 번째 섹션의 배경위로 올리기 위한 div 박스 */
+.sect01_ctnt_area{
+  position : relative;
+  z-index : 1;
+}
+
+/* 콘텐츠 영역 (section 안쪽 div) */
+.ctnt_area{
+  margin : 0 auto;
+}
+
+/* 1100px 이상의 경우 */
+@media screen and (min-width : 1100px){
+  .ctnt_area{
+    width : 1100px;
+  }
+
+}
+
+/* 첫 섹션 배경 이미지 감싸는 박스 */
+.home-bg_wrap{
+  width : 100%;
+  position : absolute;
+  left : 0;
+  top : 0;
+  background: 
+  linear-gradient(270deg, rgba(12, 0, 0, .98) 0%, rgba(0, 0, 0, 0) 100%),
+  linear-gradient(90deg, rgba(12, 0, 0, .98) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* 첫 섹션 배경 이미지 */
+.home-sect01_bg{
+  width : 100%;
+  position : relative;
+  z-index : -1;
+  filter : blur(15px);
+}
+
+/* 첫 섹션 네비게이션 박스 서식 (ul 태그) */
+.sect01-navbar{
+  width : 100%;
+  background-color: rgba(0,0,0,.2);
+  margin-top : 50px;
+  display : flex;
+}
+
+/* 첫 섹션 네비게이션 박스 li 의 서식 */
+.sect01-navbar > li{
+  width : 25%;
+  padding : calc( 45px / 2 ) 0;
+  display : flex;
+  align-items : center;
+  position : relative;
+  justify-content: center;
+}
+
+/* 첫 섹션 네비게이션 박스의 마지막 제외 li의 가상요소 */
+.sect01-navbar > li:not(:last-child)::after{
+  content : "";
+  display : block;
+  width : 2px;
+  height : 30px;
+  position : absolute;
+  top : calc(45px / 2);
+  right: 0;
+  background-color : rgba(255,255,255,.2);
+}
+
+/* 첫 섹션 네비게이션 검색폼 */
+.sect01-search{
+  width : 80%;
+  height: 30px;
+  position : relative;
+  margin : 0 auto;
+}
+
+/* 첫 섹션 네비게이션 input */
+.sect01-search input{
+  background : none;
+  border : none;
+  color : #fff;
+  text-indent : 8px;
+  line-height : 1.5;
+  font-size : 18px;
+  font-weight : bold;
+}
+/* 포커스 없애기 */
+.sect01-search input:focus{
+  outline: none;
+}
+/* 검색폼 밑줄 가상요소 */
+.sect01-search::after{
+  content : "";
+  display : inline-block;
+  width : 100%;
+  height : 2px;
+  background-color : rgba(255,255,255,.2);
+  position : absolute;
+  left : 0;
+  bottom :0;
+}
+
+/* 네비게이션 바 텍스트 서식 */
+.sect01-cal_txt, .sect01-box_txt, .sect01-ticket_txt{
+  margin-left : 8px;
+}
+
+/* 첫 번째 섹션 마우스 박스 */
+.sect01-mouse{
+  text-align: center;
+  margin-top : 50px;
+  position : relative;
+}
+
+/* 마우스 이미지 */
+.mouse_img{
+  position : relative;
+  left : 0;
+  top : 0;
+  transition : .5s;
+}
+
+.mouse_img.on{
+  top : -15px;
+}
+
+
+
